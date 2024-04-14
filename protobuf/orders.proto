@@ -4,6 +4,7 @@ option go_package = "github.com/leetcode-golang-classroom/golang-order-managemen
 
 service OrderService {
   rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse) {}
+  rpc GetOrders(GetOrdersRequest) returns (GetOrderResponse) {}
 }
 
 message Order {

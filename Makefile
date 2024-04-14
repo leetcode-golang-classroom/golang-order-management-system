@@ -9,10 +9,14 @@ genproto:
 build-orders:
 	@go build -o bin/orders services/orders/main.go services/orders/grpc.go services/orders/http.go 
 build-kitchen:
-	@go build -o bin/kitchen services/kitchen/main.go 
+	@go build -o bin/kitchen services/kitchen/main.go services/kitchen/http.go
+
 
 run-orders: build-orders
 	@./bin/orders
+
+run-kitchen: build-kitchen
+	@./bin/kitchen
 
 test:
 	@go test -v -cover ./test/...

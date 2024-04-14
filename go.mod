@@ -1,6 +1,6 @@
 module github.com/leetcode-golang-classroom/golang-order-management-system
 
-go 1.22.0
+go 1.22
 
 require (
 	golang.org/x/net v0.21.0 // indirect
